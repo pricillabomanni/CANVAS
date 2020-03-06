@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #quadro {
+            border: 1px solid black;
+            background-color: grey;
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas width="400" height="400" id="quadro">
+
+        <!-- <img src="/img/gato.jpg" alt=""> -->
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("quadro")
+        if (canvas.getContext) {
+            var ctx = canvas.getContext("2d")
+            ctx.beginPath()
+            // desenhando circulo
+            // Lembrar de que canvas não trabalha com angulos em graus, somente em radianos. Para transformar usa a formula abaixo.
+            ctx.arc(100, 100, 40, Math.PI / 180 * 45, Math.PI / 180 * 315)
+            // fazendo linhas
+            ctx.lineTo(100, 100)
+            ctx.lineTo(129, 129)
+            // colocando cores
+            ctx.fillStyle = "rgb(255,255,0)"
+            // mostrar cor e desenho
+            ctx.fill()
+            ctx.stroke()
+
+        }
+        else {
+            alert("Navegador não suporta o Canvas!!!")
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

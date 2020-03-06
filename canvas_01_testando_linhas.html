@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Canvas Exemplo 01</title>
+
+    <style>
+        #quadro {
+            border: 1px solid black;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas width="300" height="200" id="quadro"></canvas>
+
+    <script>
+        // Desenhando uma linha no canvas
+        var canvas = document.getElementById("quadro")
+
+        // Verificando se navegador tem suporte
+        // canvas.getContext é o mesmo que canvas.getContext==true
+        if(canvas.getContext){
+            var contexto = canvas.getContext("2d")
+        }
+        else{
+            alert("Elemento não é suportado pelo navegador!!")
+        }
+
+        // avisando que vou começar a desenhar em plano cartesiano 
+       contexto.beginPath() 
+       contexto.moveTo(10,10)
+       contexto.lineTo(10,50)
+           
+       contexto.moveTo(10,50)
+       contexto.lineTo(50,10)
+       contexto.strokeStyle="black"
+       contexto.stroke()
+
+       
+       contexto.strokeStyle="red"
+       contexto.stroke()    // Começando de fato a desenhar em plano cartesiano 
+
+
+       
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        canvas{
+            border: 1px solid rgb(184, 26, 26);
+            background-color: aquamarine;
+        }
+
+    </style>
+
+</head>
+<body>
+    <canvas width="300" height="300" id="quadro"></canvas>
+
+    <script>
+
+        var quadro = document.getElementById("quadro")
+
+        // Verificando se há suporte do navegador
+        if(quadro.getContext){
+            // ctx = abreviação de contexto
+           var ctx = quadro.getContext("2d")
+           ctx.fillStyle = "rgba(0,149,197, 0.1)"
+           ctx.fillRect(30,30,200,100)            
+        }
+        else{
+            alert("Não funciona neste navegador!")
+        }
+
+        // Preparando para o inicio de desenho
+
+
+    </script>
+
+
+    
+</body>
+</html>
