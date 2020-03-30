@@ -1,0 +1,23 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+
+function desenhaQuadrado(x,y, cor, qtdQuadrado){
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    
+    pincel.fillStyle = cor;
+    pincel.fillRect(x,y,50,50);
+    pincel.strokes='black';
+    pincel.strokeRect(x,y,50,50);  
+}    
+
+    var x= parseInt(prompt('Digite o valor x do quadrado: '));
+    var y = parseInt(prompt('Digite o valor y do quadrado: '));
+    var cor = prompt('Digite a cor desejada do quadrado:: ');
+    desenhaQuadrado(x,y, cor);
+  
+
+</script>

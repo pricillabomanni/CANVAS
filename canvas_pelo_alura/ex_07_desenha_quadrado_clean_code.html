@@ -1,0 +1,22 @@
+<canvas width="600" height="400" style = 'background-color: rgba(172, 255, 47, 0.582);'></canvas>
+<br>
+
+<button id="botaoDesenho" onclick="desenhaQuadrado()">Clique aqui para desenhar seu quadrado</button>
+
+<script>
+
+    function desenhaQuadrado(
+        x = parseInt(prompt('Digite o valor x: ')),
+        y = parseInt(prompt('Digite o valor y: ')),
+        cor = prompt('Digite a cor do seu quadrado: ')) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.strokeRect(x, y, 50, 50);
+        pincel.fill();
+    }
+
+</script>
