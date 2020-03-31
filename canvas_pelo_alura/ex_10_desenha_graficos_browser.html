@@ -1,0 +1,115 @@
+<canvas width="250" height="200" ></canvas>
+
+<script>
+
+    // function desenhaGrafico() {
+
+    //     var tela = document.querySelector('canvas');
+    //     var pincel = tela.getContext('2d');
+
+    //     pincel.fillStyle = 'blue';
+    //     pincel.fillRect(20, 20, 50, 50);
+    //     pincel.strokes = 'black';
+    //     pincel.strokeRect(20, 20, 50, 50);
+
+    //     pincel.fillStyle = 'green';
+    //     pincel.fillRect(20, 70, 50, 30);
+    //     pincel.strokes = 'black';
+    //     pincel.strokeRect(20, 70, 50, 30);
+
+    //     pincel.fillStyle = 'yellow';
+    //     pincel.fillRect(20, 100, 50, 20);
+    //     pincel.strokes = 'black';
+    //     pincel.strokeRect(20, 100, 50, 20);
+
+    //     pincel.fillStyle = 'red';
+    //     pincel.fillRect(20, 120, 50, 8);
+    //     pincel.strokes = 'black';
+    //     pincel.strokeRect(20, 120, 50, 8);
+    //     // _________________________________________
+
+    //     pincel.fillStyle = 'blue';
+    //     pincel.fillRect(120, 20, 50, 70);
+    //     pincel.strokes = 'black';
+    //     pincel.strokeRect(120, 20, 50, 70);
+
+    //     pincel.fillStyle = 'green';
+    //     pincel.fillRect(120, 90, 50, 20);
+    //     pincel.strokes = 'black';
+    //     pincel.strokeRect(120, 90, 50, 20);
+
+    //     pincel.fillStyle = 'yellow';
+    //     pincel.fillRect(120, 110, 50, 15);
+    //     pincel.strokes = 'black';
+    //     pincel.strokeRect(120, 110, 50, 15);
+
+    //     pincel.fillStyle = 'red';
+    //     pincel.fillRect(120, 125, 50, 3);
+    //     pincel.strokes = 'black';
+    //     pincel.strokeRect(120, 125, 50, 3);
+    // }
+
+
+    // function desenhaTexto() {
+
+
+    //     var tela = document.querySelector('canvas');
+    //     var pincel = tela.getContext('2d');
+    //     var texto = 'Tabela'
+
+    //     pincel.font = '15px Georgia';
+    //     pincel.fillStyle = 'black';
+    //     pincel.fillText();
+
+    // }
+
+    // function desenhaBarra() {
+
+    //    desenhaTexto(5,5,texto)
+
+    // };
+
+    // desenhaGrafico();
+    // desenhaTexto();
+    // desenhaBarra();
+
+
+    function desenhaRetangulo(x, y, largura, altura, cor) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle=cor;
+        pincel.fillRect(x,y, largura, altura);
+        pincel.strokeStyle='black';
+        pincel.strokeRect(x,y, largura, altura);
+    }
+
+    function desenhaTexto(x , y, texto) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.font='15px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y);    
+    }
+
+    function desenhaBarra(x, y, serie, cores, texto) {
+
+        desenhaTexto(x, y - 10, texto);
+
+        var somaAltura = 0;
+        for (var i = 0; i < serie.length; i++) {
+            var altura = serie[i];
+            desenhaRetangulo(x, y + somaAltura, 50, altura, cores[i]);
+            somaAltura = somaAltura + altura;
+        }
+    }
+
+    var cores = ['blue','green','yellow', 'red'];
+    var serie2015 = [50,25,20,5];
+    var serie2016 = [65,20,13,2];
+
+    desenhaBarra(50, 50, serie2015, cores, '2015');
+    desenhaBarra(150, 50, serie2016, cores, '2016');
+
+</script>
