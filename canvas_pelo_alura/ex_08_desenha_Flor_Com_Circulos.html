@@ -1,0 +1,77 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(300, 150, 10, 130);
+
+
+    function desenhaCirculo() {
+
+
+        pincel.fillStyle = 'orange';
+        pincel.beginPath();
+        pincel.arc(300, 125, 15, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'plum';
+        pincel.beginPath();
+        pincel.arc(280, 130, 15, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'orange';
+        pincel.beginPath();
+        pincel.arc(275, 148, 15, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'plum';
+        pincel.beginPath();
+        pincel.arc(278, 168, 15, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'orange';
+        pincel.beginPath();
+        pincel.arc(300, 175, 15, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'plum';
+        pincel.beginPath();
+        pincel.arc(320, 130, 15, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'orange';
+        pincel.beginPath();
+        pincel.arc(328, 148, 15, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'plum';
+        pincel.beginPath();
+        pincel.arc(320, 168, 15, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'green';
+        pincel.beginPath();
+        pincel.arc(316, 235, 10, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'green';
+        pincel.beginPath();
+        pincel.arc(294, 210, 10, 0, 2 * 3.14);
+        pincel.fill();
+
+        pincel.fillStyle = 'yellow';
+        pincel.beginPath();
+        pincel.arc(300, 150, 15, 0, 2 * 3.14);
+        pincel.fill();
+
+    }
+
+    desenhaCirculo()
+
+
+
+
+
+</script>
